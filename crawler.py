@@ -122,9 +122,10 @@ def ParseMainBookPage(bookLink, startChapter=1):
     
     # Chapter startChapter
     generatedName = "".join(["title=\"Chapter ", str(startChapter)])
-    readLoc = HTML_LocateEndPosition(generatedName, html)
+    readLoc = HTML_LocatePosition("<ul class=\"list-chapter\">", html)
+    readLoc = HTML_LocateEndPosition(generatedName, html, readLoc)
     if html[readLoc] not in [':', ' ', '-', ';']:
-        print(f"Error! Unable to locate starting chapter from provided page. {html[readLoc-5:readLoc+5]}")
+        print(f"Error! Unable to locate starting chapter from provided page. {html[readLoc]}, {html[readLoc-5:readLoc+5]}")
         exit()
     readLoc = HTML_LocateTagStartFromPosition(html, readLoc)
     readLoc = HTML_LocateEndPosition("<a href=", html, readLoc)
