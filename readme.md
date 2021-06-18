@@ -1,3 +1,11 @@
+# SpiderLeg
+SpiderLeg is a webcrawler designed for popular publishing sites where translated reading material typically congregates. After being provided a link, SpiderLeg will 
+- Go out and download each chapter of the series
+- Extract the contents of each chapter
+- Generate a .epub file to represent those actions
+
+SpiderLeg itself is rather mundane, but most great things are!
+
 # Installation
 - ```apt install python3 -y```
 - ```pip3 install EbookLib```
