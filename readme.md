@@ -19,8 +19,10 @@ SpiderLeg itself is rather mundane, but most great things are!
 # Supported Websites
 - NF - NovelFull
 - NH - NovelHall
-  
-## Examples (NovelFull)
+<br><br><br><br>
+# Examples
+
+## NovelFull - NF
 ### Download the entire series as a single Epub
 - ```python3 spiderleg.py NF https://novelfull.com/release-that-witch.html```
 
@@ -38,7 +40,7 @@ The output file will use the series title and append a range if you specified on
 
 
 <br><br><br><br>
-## (NovelHall)
+## NovelHall - NH
 ### Download the entire series as a single Epub
 - ```python3 spiderleg.py NH 'https://www.novelhall.com/the-villainess-turns-the-hourglass-10137/'```
 
