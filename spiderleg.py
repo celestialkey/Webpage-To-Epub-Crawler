@@ -101,7 +101,8 @@ def EPUB_GenerateEpub(bookTitle, chapterQueue, authors, startChapter=0, endChapt
 
 if __name__ == "__main__":
     pageQueue = queue.Queue()
-    
+
+    # Grab from NovelFull
     if len(sys.argv) < 3:
         print("Usage: spiderleg.py <site> <bookLink> [<startOnChapter>-<endOnChapter>]\n\n")
         if len(sys.argv) == 2:
@@ -115,7 +116,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 4:
         startChapter, endChapter = sys.argv[3].split("-")
     if sys.argv[1] == "NF":
-        # NovelFull Module
+        # Novel Full Module
         from modules.novelfull import ParseMainBookPage
         from modules.novelfull import ChainLoadPages
         bookTitle, firstChapter = ParseMainBookPage(sys.argv[2], startChapter)
@@ -124,7 +125,7 @@ if __name__ == "__main__":
                             int(startChapter), int(endChapter),
                             sys.argv[2], "https://www.novelfull.com/")
     elif sys.argv[1] == "NH":
-        # NovelHall Module
+        # Novel Hall Module
         from modules.novelhall import ParseMainBookPage
         from modules.novelhall import ChainLoadPages
         bookTitle, firstChapter = ParseMainBookPage(sys.argv[2], startChapter)
@@ -132,13 +133,57 @@ if __name__ == "__main__":
         EPUB_GenerateEpub(  bookTitle, pageQueue, [],
                             int(startChapter), int(endChapter),
                             sys.argv[2], "https://www.novelhall.com/")
+    elif sys.argv[1] == "RR":
+        # Royal Road Module
+        exit()
+    elif sys.argv[1] == "WP":
+        # Watt Pad Module
+        exit()
+    elif sys.argv[1] == "GT":
+        # Gravity Tales Module
+        exit()
+    elif sys.argv[1] == "WW":
+        # Wuxia World Module
+        exit()
+    elif sys.argv[1] == "WN":
+        # Web Novel Module
+        exit()
+    elif sys.argv[1] == "WFG":
+        # Web Fiction Guide Module
+        exit() 
+    elif sys.argv[1] == "SH":
+        # Scribble Hub Module
+        exit()
+    elif sys.argv[1] == "LNMTL":
+        # Light Novel Machine Translations Module
+        exit()
+    elif sys.argv[1] == "VN":
+        # Volare Novels Module
+        exit()
+    elif sys.argv[1] == "TR":
+        # Tap Read Module
+        exit()
+    elif sys.argv[1] == "MS":
+        # Muse's Success Module
+        exit()
+    elif sys.argv[1] == "WB":
+        # Wordy Buzz Module
+        exit()
+    elif sys.argv[1] == "MQ":
+        # Moon Quill Module
+        exit()
+    elif sys.argv[1] == "TP":
+        # Tapas Module
+        exit()
+    elif sys.argv[1] == "FP":
+        # Fiction Press Module
+        exit()
+    elif sys.argv[1] == "IK":
+        # Inkitt Module
+        # Requires special consideration
+        exit()
+    #elif sys.argv[1] == "NU":
+        # Novel Updates Module
+        # Requires special consideration as it's a catelog, not a host
+        #exit()
     exit()
-
-
-
-
-
-
-
-
-
