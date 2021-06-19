@@ -102,7 +102,6 @@ def EPUB_GenerateEpub(bookTitle, chapterQueue, authors, startChapter=0, endChapt
 if __name__ == "__main__":
     pageQueue = queue.Queue()
 
-    # Grab from NovelFull
     if len(sys.argv) < 3:
         print("Usage: spiderleg.py <site> <bookLink> [<startOnChapter>-<endOnChapter>]\n\n")
         if len(sys.argv) == 2:
