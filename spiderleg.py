@@ -178,6 +178,36 @@ if __name__ == "__main__":
     elif sys.argv[1] == "FP":
         # Fiction Press Module
         exit()
+    elif sys.argv[1] == "FM":
+        # FANmily Module
+        exit()
+    elif sys.argv[1] == "FL":
+        # Flying Lines Module
+        exit()
+    elif sys.argv[1] == "WE":
+        # Word Excerpt Module
+        exit()
+    elif sys.argv[1] == "CN":
+        # Creative Novels Module
+        exit()
+    elif sys.argv[1] == "FR":
+        # Final Reads Module
+        exit()
+    elif sys.argv[1] == "BN":
+        # Box Novels Module
+        exit()
+    elif sys.argv[1] == "BLN":
+        # Best Light Novel Module
+        exit()
+    elif sys.argv[1] == "RLN":
+        # Read Light Novel Module
+        exit()
+    elif sys.argv[1] == "WNO":
+        # Web Novel Online Module
+        exit()
+    elif sys.argv[1] == "BSN":
+        # Best Novel Module
+        exit()
     elif sys.argv[1] == "IK":
         # Inkitt Module
         # Requires special consideration
