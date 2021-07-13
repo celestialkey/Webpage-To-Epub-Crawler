@@ -5,8 +5,10 @@ import queue
 
 from ebooklib import epub
 
+# ./spiderleg.py NF 'https://novelfull.com/index.php/war-sovereign-soaring-the-heavens.html?page=25&per-page=50' 1248-1250
+
 SPIDERLEG_NAME      = "SpiderLeg"
-SPIDERLEG_VERSION   = "1.3"
+SPIDERLEG_VERSION   = "1.4"
 SPIDERLEG_AUTHOR    = "Celestialkey"
 SPIDERLEG_HOME      = "https://github.com/celestialkey/spiderleg-web-to-epub-crawler"
 
@@ -132,6 +134,15 @@ if __name__ == "__main__":
         EPUB_GenerateEpub(  bookTitle, pageQueue, [],
                             int(startChapter), int(endChapter),
                             sys.argv[2], "https://www.novelhall.com/")
+    elif sys.argv[1] == "1KN":
+        # 1stKissNovel Module
+        from modules.firstkiss import ParseMainBookPage
+        from modules.firstkiss import ChainLoadPages
+        bookTitle, firstChapter = ParseMainBookPage(sys.argv[2], startChapter)
+        ChainLoadPages(firstChapter, pageQueue, int(endChapter), int(startChapter))
+        EPUB_GenerateEpub(  bookTitle, pageQueue, [],
+                            int(startChapter), int(endChapter),
+                            sys.argv[2], "https://www.1stkissnovel.love/")
     elif sys.argv[1] == "RR":
         # Royal Road Module
         exit()
@@ -211,6 +222,7 @@ if __name__ == "__main__":
         # Inkitt Module
         # Requires special consideration
         exit()
+        # 
     #elif sys.argv[1] == "NU":
         # Novel Updates Module
         # Requires special consideration as it's a catelog, not a host
